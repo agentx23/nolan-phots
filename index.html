@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diary Photo Gallery</title>
+  <link rel="stylesheet" href="Photos.css" />
+</head>
+<body>
+
+<!-- my code for my website -->
+    
+<header>
+  <h1>My Diary Photo Gallery</h1>
+  <p>Memories Photos</p>
+</header>
+
+<section>
+  <h2>july</h2>
+  <div class="gallery">
+    <img src="photos/IMG_20250725_094150_0006.jpg" alt="January Photo 1">
+    <img src="photos/IMG_20250725_094406_0485.jpg" alt="January Photo 2">
+    <img src="photos/IMG20250721204455.jpg" alt="January Photo 3">
+  </div>
+</section>
+
+<section>
+  <h2>June</h2>
+  <div class="gallery">
+    <img src="photos/IMG20250630161835.jpg" alt="June Photo 1">
+    <img src="photos/IMG20250630161850.jpg" alt="June Photo 2">
+    <img src="photos/pic.jpeg" alt="June Photo 3">
+  </div>
+</section>
+
+<section>
+  <h2>may</h2>
+  <div class="gallery">
+    <img src="photos/IMG20250510153640.jpg" alt="may Photo 1">
+    <img src="photos/IMG20250525154737.jpg" alt="may Photo 2">
+    <img src="photos/pic2.jpeg" alt="may Photo 2">
+    <img src="photos/pic3.jpeg" alt="may Photo 2">
+    <img src="photos/pic4.jpeg" alt="may Photo 2">
+  </div>
+</section>
+
+<!-- Repeat more months as needed -->
+
+<!-- Fullscreen Popup -->
+<div id="popup">
+    <img id="popup-img" src="" alt="Full View">
+  </div>
+  
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+  
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        popup.style.display = 'flex';
+        popupImg.src = img.src;
+      });
+    });
+  
+    popup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  </script>
+  
+
+
+</body>
+</html>
